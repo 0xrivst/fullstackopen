@@ -2,7 +2,7 @@ import { useQuery } from "@apollo/client";
 import { ALL_BOOKS } from "../lib/queries";
 import Loading from "./Loading";
 
-const Books = (props) => {
+const Books = () => {
   const result = useQuery(ALL_BOOKS);
 
   if (result.loading) {
