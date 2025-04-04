@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
 import { useMutation } from "@apollo/client";
-import { LOGIN } from "../lib/queries";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { LOGIN } from "../lib/queries";
 
 const Login = ({ setError, setToken }) => {
   const [username, setUsername] = useState("");

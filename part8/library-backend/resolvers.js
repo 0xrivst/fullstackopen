@@ -19,7 +19,8 @@ const resolvers = {
       // if (args.author)
       //   return books.filter((book) => book.author === args.author);
 
-      if (args.genre) return await Book.find({ genres: args.genre });
+      if (args.genre)
+        return await Book.find({ genres: args.genre }).populate("author");
 
       return Book.find({}).populate("author");
     },
@@ -109,9 +110,6 @@ const resolvers = {
     },
     createUser: async (_, args) => {
       const user = new User({ ...args });
-
-      console.log(user);
-      console.log(args);
 
       try {
         await user.save();

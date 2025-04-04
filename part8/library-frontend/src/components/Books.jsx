@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import { useQuery } from "@apollo/client";
+import { useState } from "react";
 import { ALL_BOOKS } from "../lib/queries";
 import Loading from "./Loading";
 
