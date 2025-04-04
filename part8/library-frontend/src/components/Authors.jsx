@@ -10,6 +10,7 @@ const Authors = () => {
     return <Loading />;
   }
 
+  console.log(result);
   const authors = result.data.allAuthors;
 
   const submit = async (event) => {

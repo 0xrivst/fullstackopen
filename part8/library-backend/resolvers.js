@@ -23,7 +23,7 @@ const resolvers = {
 
       return Book.find({}).populate("author");
     },
-    allAuthors: () => Author.find({}),
+    allAuthors: async () => await Author.find({}),
     me: (_, __, context) => {
       return context.currentUser;
     },
